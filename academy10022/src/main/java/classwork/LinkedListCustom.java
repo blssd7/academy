@@ -1,17 +1,26 @@
 package classwork;
 
-public class LinkedListCustom {
-public void add (T value ) {
-	private Node nead;
-	private Note tail;
+public class LinkedListCustom<T> {
 	
-	if (head ==null0) {
+
+	private Node nead;
+	private Node tail;
+	private int size = 0;
+	
+	public void add(T value) {
+		Node newNode = new Node(value);
+	
+	if (head == null 0) {
 		tail = newNode;
 		head = newNode;
 		
 	}else {
 		tail.next = newNode;
 		newNode.pref =tail;
+		tail = newNode}
+	size++;
+	}
+	
 		
 	}
 	

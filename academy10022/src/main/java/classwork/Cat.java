@@ -1,9 +1,10 @@
 
 package classwork;
 
-public class Cat {
+public class Cat  implements Serializable {
+	private static final long serialVersion = 2L;
 
-	int age;
+	int tranch age;
 	String nickname;
 
 	public String serialNumber = "cat";
@@ -70,3 +71,4 @@ public class Cat {
 		return builder.toString();
 	}
 }
+
