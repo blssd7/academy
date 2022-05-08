@@ -18,29 +18,42 @@ public class Task1 {
 		if (price < 100) {
 			discount = 5;
 
-		} else if (price < 200 && price >= 100) {
-			discount = 7;
-		} else if (price >= 200 && price < 300) {
-			discount = 12;
-			if (age >= 18) {
-				discount += 4;
+		} else {
+			if (price < 200 && price >= 100) {
 
+				discount = 7;
 			} else {
-				discount -= 3;
+				if (price >= 200 && price < 300) {
+
+					discount = 12;
+					if (age >= 18) {
+						discount += 4;
+
+					} else {
+						discount -= 3;
+
+						if (price > 300 && price < 400) {
+
+							discount = 15;
+
+						} else {
+							if (price >= 400) {
+
+								discount = 20;
+							}
+
+							System.out.println("Скидка: +  discount + %");
+
+							discount = price * (discount / 100);
+							price -= discount;
+
+							System.out.println("Цена со скидкой: $" + price);
+
+							scanner.close();
+						}
+					}
+				}
 			}
-		} else if (price > 300 && price < 400) {
-			discount = 15;
-
-		} else if (price >= 400) {
-			discount = 20;
 		}
-		System.out.println("Скидка: +  discount + %");
-
-		discount = price * (discount / 100);
-		price -= discount;
-
-		System.out.println("Цена со скидкой: $" + price);
-
-		scanner.close();
 	}
 }
